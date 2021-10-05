@@ -113,15 +113,13 @@ void apaga_lista(Lista *l){
 
 	if(*l != NULL){
 
-		Lista aux = (*l)->prox;
-		while((*l)->prox != *l){
-			(*l)->prox = aux->prox;
+		Lista aux = *l;
+		while(*l != NULL){
+			*l = aux->prox;
 			free(aux);
-			aux = (*l)->prox;
+			aux = *l;
 		}
-		free(*l);
-		*l = NULL;
-
+		
 	}
 
 }
