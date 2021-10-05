@@ -67,7 +67,6 @@ int main(){
 
 				case 4:
 					cout << "\nDigite o elemento: ";
-					//int elem;
 					cin >> elem;
 					if(remove(&l1, elem)) cout << "\nElemento removido com sucesso!\n" << endl;
 					else				  cout << "\nHouve algum erro!\n" << endl;
